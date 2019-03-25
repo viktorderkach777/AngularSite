@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UsersService } from '../users.service';
+
 
 @Component({
   selector: 'app-home',
@@ -6,10 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+private users: object;
+  constructor(private data: UsersService) { }
 
   ngOnInit() {
+    this.data.getUsers().subscribe(data => {
+      console.log('We have new data!!!');
+      this.users = data;
+    });
   }
+
+firstClick(){
+  // console.log("Hello from first clickable Button!!!");
+  this.data.firstClick();
+}
 
 }
