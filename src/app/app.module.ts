@@ -10,6 +10,10 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { CvHeaderComponent } from './cv-header/cv-header.component';
+import { CvAboutMeComponent } from './cv-about-me/cv-about-me.component';
+import { CvPageComponent } from './cv-page/cv-page.component';
+import { CvSkillsComponent } from './cv-skills/cv-skills.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { ContactsComponent } from './contacts/contacts.component';
     FooterComponent,
     HomeComponent,
     AboutComponent,
-    ContactsComponent
+    ContactsComponent,
+    CvHeaderComponent,
+    CvAboutMeComponent,
+    CvPageComponent,
+    CvSkillsComponent
   ],
   imports: [
     BrowserModule,
